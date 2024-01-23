@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e3e3e;
+}
+
+#main {
+  display: flex;
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #fefefe;
+}
+
+#app > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#app > div > div, #next > div {
+  width: 40px;
+  height: 40px;
+  border: .55px solid #333;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 0.05s ease-in-out;
+}
+
+#next {
+  position: relative;
+  overflow: hidden;
+  background-color: #fefefe;
+  border-radius: 6px;
+  margin-left: 20px;
+}
+
+.active_model, .next_model {
+  background-color: cadetblue;
+  z-index: 1;
+}
+
+.fixed_model {
+  background-color: #9e9e9e;
+  z-index: 3;
+
+  /*opacity: 0;*/
+  /*animation: showModel 0.55s ease-in-out;*/
+}
+
+@keyframes showModel {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 0;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 1;
+  }
+}
+
+.trash_model {
+  background-color: #ccc;
+  z-index: 3;
+}
+
+.invisible_model {
+  opacity: 0;
+}
+
+.fixed, .trash {
+  z-index: 3;
+}
+
+#app .bottom_model, #next .bottom_model {
+  border: 0.55px dashed rgba(0, 0, 0, .1);
+  z-index: 0;
+}
+
+.bottom {
+  z-index: 0;
+}
+
+#app .preview_model {
+  border: 2px dashed rgba(0, 0, 0, .85);
+  z-index: 1;
+}
+
+.preview {
+  z-index: 1;
+}
+
+.score {
+  margin-top: 40px;
+  margin-left: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.score span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.score #score {
+  color: darkred;
+}
+
+

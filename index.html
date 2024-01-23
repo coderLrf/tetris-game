@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue-俄罗斯方块</title>
+</head>
+<link rel="stylesheet" href="./css/style.css">
+<body>
+  <div id="main">
+    <div id="app">
+      <div class="bottom" id="bottom"></div>
+      <div class="active" id="active"></div>
+      <div class="preview" id="preview"></div>
+      <div class="trash" id="trash"></div>
+    </div>
+
+    <div>
+      <div id="next"></div>
+
+      <div class="score">
+        <div>
+          <h3>用时</h3>
+          <span id="time">00</span>
+        </div>
+        <div>
+          <h3>当前得分</h3>
+          <span id="score">00</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<script src="./js/clone.js"></script>
+<script src="./js/dataSource.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
